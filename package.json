@@ -1,7 +1,7 @@
 {
   "name": "rick-cli",
   "description": "Rick, the build enforcer, will keep you from pushing to master when your Jenkins job is red",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/rick.js",
   "dependencies": {
     "jenkins": "^0.7.0"
