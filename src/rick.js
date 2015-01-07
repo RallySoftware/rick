@@ -35,7 +35,7 @@ module.exports = function(url, job, onComplete) {
     if (err) { throw err; }
     var color = data.color;
     console.log(job + '\'s color is', color);
-    var successful = 'blue' === color || 'blue_anime' === color;
-    onComplete && onComplete(successful);
+    var failed = 'red' === color || 'red_anime' === color;
+    onComplete && onComplete(!failed);
   });
 };
