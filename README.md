@@ -14,7 +14,4 @@ $ rick <url> <jobName>
 
 The best way to employ Rick, is in a server-side `update` git hook. That way, he can protect all your developers from pushing on red with minimal effort. See http://git-scm.com/book/zh/v2/Customizing-Git-Git-Hooks for more information on setting up git hooks.
 
-If you, like me, don't have access to the server that your git repo is hosted on (ie. github), then you can still employ Rick client-side in the `pre-push` git hook. See `examples/pre-push` for a template. 
-```bash
-$ git push origin HEAD
-```
+If you, like me, don't have access to the server that your git repo is hosted on (ie. github), then you can still employ Rick client-side in the `pre-push` git hook. See `examples/pre-push` for a template. Copy it to `.git/hooks/pre-push` in your repo, make sure it's executable, configure it for your Jenkins set up, and run git push.
