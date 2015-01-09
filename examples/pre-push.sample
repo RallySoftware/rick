@@ -3,11 +3,14 @@
 # This hook runs when `git push` is invoked and prevents you from
 # accidentally pushing to master on a broken build.
 #
-# If you are pushing to the master branch of your specific repo and rick fails, 
-# the push will fail letting you know how to get around it if need be.
+# If you are pushing to the master branch of **github.com:yourAwesomeRepo.git and rick fails, 
+# the push will also fail, letting you know how to get around it if need be.
 
 remote="$1"
 url="$2"
+
+JENKINS_BRANCH='refs/heads/master'
+JENKINS_REPO='**github.com:yourAwesomeRepo.git'
 
 IFS=' '
 while read local_ref local_sha remote_ref remote_sha
@@ -15,15 +18,14 @@ do
     # only protect the branch Jenkins monitors
     # don't care about forked repos
     # only if rick is installed
-    if [[ $remote_ref == "refs/heads/master" && \
-          $url == *github.com:yourAwesomeRepo.git && \
-          $(command -v rick > /dev/null && echo found) == "found" ]]
+    if [[ $remote_ref == ${JENKINS_BRANCH} ]] && \
+       [[ $url == ${JENKINS_REPO} ]] && \
+       command -v rick &> /dev/null
     then
         echo "I see you're attempting to push to master. I'll check Jenkins for you."
-        rick jenkins.yourServer.com yourJobName && rc=$?
+        rick jenkins.yourorg.com yourJobName && rc=$?
         if [[ $rc != 0 ]]
         then
-            # Warn about red build
             echo "Warning: the build is RED! You should only push if you're trying to fix the build."
             echo "If you still want to push, you can run 'git push --no-verify origin HEAD'."
             exit 1

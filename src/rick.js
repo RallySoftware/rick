@@ -23,6 +23,13 @@ var patchUrl = function(url) {
 };
 
 module.exports = function(url, job, onComplete) {
+  if("me" === url) {
+    require('./me.js')(job, function(success) {
+      onComplete && onComplete(success);
+    });
+    return;
+  }
+
   if(!(url && job)) {
     console.error('please specify a url and job');
     onComplete && onComplete(false);

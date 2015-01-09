@@ -4,7 +4,9 @@
   "version": "0.0.3",
   "main": "src/rick.js",
   "dependencies": {
-    "jenkins": "^0.7.0"
+    "jenkins": "^0.7.0",
+    "prompt": "^0.2.14",
+    "shelljs": "^0.3.0"
   },
   "repository": {
     "type": "git",
