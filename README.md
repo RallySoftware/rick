@@ -1,4 +1,5 @@
-# Rick [![NPM](https://nodei.co/npm/rick-cli.png)](https://nodei.co/npm/rick-cli/)
+# Rick 
+[![NPM](https://nodei.co/npm/rick-cli.png)](https://nodei.co/npm/rick-cli/)
 
 Rick is the build enforcer. Point him at a Jenkins job and he will exit 0 when your Jenkins job is blue and 1 otherwise. Rick's job is to warn you before you push to the masterbranch on a red build.
 
