@@ -1,5 +1,5 @@
 # Rick 
-[![NPM](https://nodei.co/npm/rick-cli.png)](https://nodei.co/npm/rick-cli/)
+[![NPM](https://nodei.co/npm/rick-cli.png)](https://nodei.co/npm/rick-cli/) [![Stories in Ready](https://badge.waffle.io/RallySoftware/rick.png?label=ready&title=Ready)](https://waffle.io/RallySoftware/rick)
 
 Rick is the build enforcer. Point him at a Jenkins job and he will exit 0 when your Jenkins job is blue and 1 otherwise. Rick's job is to warn you before you push to the masterbranch on a red build.
 
