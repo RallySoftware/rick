@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/RallySoftware/rick.png?label=ready&title=Ready)](https://waffle.io/RallySoftware/rick)
 # Rick 
 [![NPM](https://nodei.co/npm/rick-cli.png)](https://nodei.co/npm/rick-cli/) [![Stories in Ready](https://badge.waffle.io/RallySoftware/rick.png?label=ready&title=Ready)](https://waffle.io/RallySoftware/rick)
 
